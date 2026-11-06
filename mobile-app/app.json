@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "FUTA Bus",
+    "slug": "futa-bus",
+    "scheme": "futaapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.futa.bus",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Ứng dụng dùng camera để soát mã QR vé xe."
+      }
+    },
+    "android": {
+      "package": "com.futa.bus",
+      "versionCode": 1,
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "backgroundColor": "#F26522",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Ứng dụng dùng camera để soát mã QR vé xe.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": true
+        }
+      ],
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-font",
+      "expo-asset"
+    ]
+  }
+}
